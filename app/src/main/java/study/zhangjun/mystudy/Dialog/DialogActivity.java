@@ -28,7 +28,7 @@ public class DialogActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_test);
-        initView();
+    //    initView();
 
     }
 
