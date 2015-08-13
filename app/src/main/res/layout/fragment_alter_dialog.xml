@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="study.zhangjun.mystudy.Dialog.AlterDialogFragment">
+
+    <Btton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="没按钮"
+        android:id="@+id/no_button"/>
+
+
+    <Btton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="有按钮"
+        android:id="@+id/has_button"/>
+
+
+    <Btton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="List"
+        android:id="@+id/list_button"/>
+
+
+    <Btton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="单选"
+        android:id="@+id/radio_button"/>
+
+
+    <Btton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="多选"
+        android:id="@+id/check_box"/>
+
+
+    <Btton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="自定义"
+        android:id="@+id/my_dialog"/>
+
+
+
+</FrameLayout>

@@ -1,9 +1,15 @@
 package study.zhangjun.mystudy;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import study.zhangjun.mystudy.Dialog.DialogActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,7 +18,21 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Timer timer = new Timer();
+        timer.schedule(schedule, 3000);
     }
+
+    TimerTask schedule = new TimerTask() {
+        @Override
+        public void run() {
+
+            Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

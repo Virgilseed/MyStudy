@@ -17,5 +17,9 @@
             </intent-filter>
         </activity>
     </application>
+    <activity
+        android:name=".Dialog.DialogActivity"
+        android:label="@string/title_activity_dialog_test" >
+    </activity>
 
 </manifest>
