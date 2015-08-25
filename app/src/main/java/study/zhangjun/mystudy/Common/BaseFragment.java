@@ -1,6 +1,7 @@
 package study.zhangjun.mystudy.Common;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,7 +16,7 @@ import study.zhangjun.mystudy.utils.StudyLogger;
  * Created by zhangjun on 15/8/10.
  */
 public class BaseFragment extends Fragment {
-    private BaseActivity mActivity;
+    protected BaseActivity mActivity;
 
     protected String title = "未定义标题";
     protected final static String ARG_TITLE = "title";
@@ -33,6 +34,12 @@ public class BaseFragment extends Fragment {
 
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.mActivity = (BaseActivity) activity;
+    }
+
     /**
      * 切换Fragment
      * 可以利用setArguments(Bundle)传值
@@ -44,13 +51,11 @@ public class BaseFragment extends Fragment {
         if (mActivity == null) return;
         mActivity.switchView(viewId, fragment);
     }
+
+
     public String getTitle()
     {
         return mActivity.getTitles();
     }
 
-    public int getSwitchId()
-    {
-        return mActivity.getReplaceFragmentId();
-    }
 }

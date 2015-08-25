@@ -3,48 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="study.zhangjun.mystudy.Dialog.AlterDialogFragment">
-
-    <Btton
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="没按钮"
-        android:id="@+id/no_button"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_15dp">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="没按钮"
+            android:padding="@dimen/default_15dp"
+            android:id="@+id/no_button"/>
 
-    <Btton
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="有按钮"
-        android:id="@+id/has_button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="有按钮"
+            android:padding="@dimen/default_15dp"
+            android:id="@+id/has_button"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List"
+            android:padding="@dimen/default_15dp"
+            android:id="@+id/list_button"/>
 
-    <Btton
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="List"
-        android:id="@+id/list_button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选"
+            android:padding="@dimen/default_15dp"
+            android:id="@+id/radio_button"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多选"
+            android:padding="@dimen/default_15dp"
+            android:id="@+id/check_box"/>
 
-    <Btton
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="单选"
-        android:id="@+id/radio_button"/>
-
-
-    <Btton
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="多选"
-        android:id="@+id/check_box"/>
-
-
-    <Btton
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="自定义"
-        android:id="@+id/my_dialog"/>
-
-
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义"
+            android:padding="@dimen/default_15dp"
+            android:id="@+id/my_dialog"/>
+    </LinearLayout>
 </FrameLayout>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import study.zhangjun.mystudy.Common.BaseActivity;
 import study.zhangjun.mystudy.Common.BaseFragment;
 import study.zhangjun.mystudy.R;
 
@@ -18,6 +19,11 @@ public class DialogFragment extends BaseFragment implements View.OnClickListener
 
     private Button mAlterDialog;
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.mActivity = (DialogActivity) activity;
+    }
 
 
     public static DialogFragment newInstance() {
@@ -50,7 +56,7 @@ public class DialogFragment extends BaseFragment implements View.OnClickListener
         switch (v.getId())
         {
             case R.id.alter_dialog:
-                switchFragment(getSwitchId(), AlterDialogFragment.newInstance());
+                switchFragment(R.id.dialog_content, AlterDialogFragment.newInstance());
                 break;
         }
     }

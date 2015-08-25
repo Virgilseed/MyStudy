@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import study.zhangjun.mystudy.Common.BaseFragment;
 import study.zhangjun.mystudy.R;
+import study.zhangjun.mystudy.utils.StudyLogger;
 
 public class AlterDialogFragment extends BaseFragment implements View.OnClickListener {
     int selectIndex = 0;
@@ -55,11 +56,11 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
         // Inflate the layout for this fragment
         View parent = inflater.inflate(R.layout.fragment_alter_dialog, container, false);
         noButton = (Button) parent.findViewById(R.id.no_button);
-        hasBuuton = (Button) parent.findViewById(R.id.no_button);
-        list = (Button) parent.findViewById(R.id.no_button);
-        radio = (Button) parent.findViewById(R.id.no_button);
-        checkBox = (Button) parent.findViewById(R.id.no_button);
-        my = (Button) parent.findViewById(R.id.no_button);
+        hasBuuton = (Button) parent.findViewById(R.id.has_button);
+        list = (Button) parent.findViewById(R.id.list_button);
+        radio = (Button) parent.findViewById(R.id.radio_button);
+        checkBox = (Button) parent.findViewById(R.id.check_box);
+        my = (Button) parent.findViewById(R.id.my_dialog);
         noButton.setOnClickListener(this);
         hasBuuton.setOnClickListener(this);
         list.setOnClickListener(this);
@@ -151,7 +152,7 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
         final AlertDialog.Builder  builder = new AlertDialog.Builder(context);
         builder.setTitle("AlterDialog之类Listview");
         builder.setIcon(R.mipmap.ic_launcher);
-        builder.setMessage("hahahahah-______=++==+=");
+        //    builder.setMessage("hahahahah-______=++==+=");
         builder.setItems(arrayFruit, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -166,7 +167,7 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
         });
 
         builder.create().show();
-        builder.show();
+        //    builder.show();
     }
 
 
@@ -177,8 +178,7 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
         final AlertDialog.Builder  builder = new AlertDialog.Builder(context);
         builder.setTitle("AlterDialog之类Listview");
         builder.setIcon(R.mipmap.ic_launcher);
-        builder.setMessage("hahahahah-______=++==+=");
-        builder.setSingleChoiceItems(arrayFruit, 0, new DialogInterface.OnClickListener() {
+        builder.setSingleChoiceItems(arrayFruit, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 selectIndex = which;
@@ -193,7 +193,8 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context, "选中了" + arrayFruit[which], Toast.LENGTH_SHORT).show();
+                StudyLogger.e("选中了：%s",which);
+                Toast.makeText(context, "选中了" + arrayFruit[selectIndex], Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -228,14 +229,14 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
                         Toast.makeText(context, stringBuilder.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }).
-                setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        setNegativeButton("取消", new DialogInterface.OnClickListener() {
 
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // TODO Auto-generated method stub
-                    }
-                }).
-                create();
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // TODO Auto-generated method stub
+                            }
+                        }).
+                        create();
         alertDialog.show();
     }
 
@@ -262,7 +263,7 @@ public class AlterDialogFragment extends BaseFragment implements View.OnClickLis
                     }
                 }).
                 create();
-    //    EditText username = myView.findViewById(R.id)
+        //    EditText username = myView.findViewById(R.id)
         alertDialog.show();
     }
 

@@ -58,12 +58,4 @@ public class BaseActivity extends ActionBarActivity{
         ft.commit();
     }
 
-
-
-
-    public int getReplaceFragmentId()
-    {
-        return R.id.activity_main_content;
-    }
-
 }

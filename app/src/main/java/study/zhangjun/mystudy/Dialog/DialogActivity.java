@@ -22,10 +22,6 @@ public class DialogActivity extends BaseActivity {
     private DialogFragment dialogFragment;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +32,8 @@ public class DialogActivity extends BaseActivity {
 
     private void initView() {
         dialogFragment = DialogFragment.newInstance();
-        switchView(getReplaceFragmentId(),dialogFragment);
+        switchView(R.id.dialog_content, dialogFragment);
     }
-
-
-
-
 
 
     private void switchView(int viewId, Fragment fragment)
