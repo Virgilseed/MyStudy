@@ -4,17 +4,10 @@ package study.zhangjun.mystudy.Common;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import study.zhangjun.mystudy.utils.StudyLogger;
 
-/**
- * Created by zhangjun on 15/8/10.
- */
+
 public class BaseFragment extends Fragment {
     protected BaseActivity mActivity;
 

@@ -7,9 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 
 import study.zhangjun.mystudy.R;
 
-/**
- * Created by zhangjun on 15/8/10.
- */
+
 public class BaseActivity extends ActionBarActivity{
     private android.support.v7.app.ActionBar actionBar;
 

@@ -2,11 +2,6 @@ package study.zhangjun.mystudy.utils;
 
 import android.util.Log;
 
-/**
- * Log帮助类
- * 请在发布时去掉注释
- * Created by Cpacm on 2015/5/15.
- */
 public class StudyLogger {
 
     private static String TAG = "IFEN";
